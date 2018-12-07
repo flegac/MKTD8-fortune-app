@@ -9,7 +9,7 @@ import kotlinx.serialization.list
 class FavoriteFortuneRepositoryImpl(
     private val preferencesHelper: PreferencesHelper
 ) : FavoriteFortuneRepository {
-    private val listSerializer: KSerializer<List<Fortune>> = TODO()
+    private val listSerializer: KSerializer<List<Fortune>> = Fortune.serializer().list
 
     private val favoritesList: MutableList<Fortune> =
         loadInitialList().toMutableList()

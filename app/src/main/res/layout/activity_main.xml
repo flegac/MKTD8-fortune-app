@@ -44,5 +44,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:id="@+id/favoriteButton"/>
-
+    <Button
+            android:text="Show Favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/favoriteButton"
+            android:id="@+id/showfavoriteButton"/>
 </android.support.constraint.ConstraintLayout>

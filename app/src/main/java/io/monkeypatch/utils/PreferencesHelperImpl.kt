@@ -6,12 +6,13 @@ import io.monkeypatch.fortunes.Application
 
 actual class PreferencesHelperImpl(
     private val sharedPreferences: SharedPreferences
-): PreferencesHelper {
+) : PreferencesHelper {
     actual constructor() : this(PreferenceManager.getDefaultSharedPreferences(Application.instance))
 
     override fun saveString(key: String, value: String) {
-        TODO("implement this using SharedPreferences")
+        //TODO("implement this using SharedPreferences")
+        sharedPreferences.edit().putString(key, value).commit()
     }
-    override fun loadString(key: String): String? =
-        TODO("implement this using SharedPreferences")
+
+    override fun loadString(key: String): String? = sharedPreferences.getString(key, "[]")
 }
